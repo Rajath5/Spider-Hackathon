@@ -88,12 +88,12 @@ function displayWeather(){
 }
 
 
-function rain(maxParts){
+function rain(maximumParticles){
     ctx.strokeStyle = 'black';
     ctx.lineWidth = 1;
     ctx.lineCap = 'round';
     var init = [];
-    for(var a = 0; a < maxParts; a++) {
+    for(var a = 0; a < maximumParticles; a++) {
       init.push({
         x: Math.random() * w,
         y: Math.random() * h,
@@ -102,14 +102,14 @@ function rain(maxParts){
         dy: Math.random() * 8 + 8
       })
     }
-    var particles = [];
-    for(var b = 0; b < maxParts; b++) {
-      particles[b] = init[b];
+    var particleArray = [];
+    for(var b = 0; b < maximumParticles; b++) {
+      particleArray[b] = init[b];
     }
     function draw() {
       ctx.clearRect(0, 0, w, h);
-      for(var c = 0; c < particles.length; c++) {
-        var p = particles[c];
+      for(var c = 0; c < particleArray.length; c++) {
+        var p = particleArray[c];
         ctx.beginPath();
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(p.x + p.l * p.dx, p.y + p.l * p.dy);
@@ -118,8 +118,8 @@ function rain(maxParts){
       move();
     }
     function move() {
-      for(var b = 0; b < particles.length; b++) {
-        var p = particles[b];
+      for(var b = 0; b < particleArray.length; b++) {
+        var p = particleArray[b];
         p.x += p.dx;
         p.y += p.dy;
         if(p.x > w || p.y > h) {
@@ -254,7 +254,7 @@ function sun()
     ctx.fill();
  
     var rotate2 = 0;
-    for( var i = 0; i < 8; i++) {
+    for( var i = 0; i < 6; i++) {
         ctx.save(); 
         ctx.fillStyle = "red"
         ctx.rotate(rotate2);
