@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Ranchers', cursive;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(218, 221, 236);
+}
+
+#w-container
+{
+    color: teal;
+}
+#city
+{
+    color: whitesmoke;
+}
+.container
+{   
+    width: 100%;
+    margin: auto;
+    background-color: rgb(185, 183, 209);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.title
+{
+    color: wheat;
+}
